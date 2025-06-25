@@ -1,5 +1,11 @@
-import type { Preview } from "@storybook/react-vite";
+import type { Preview } from "@storybook/react";
+
+import { initialize, mswLoader } from "msw-storybook-addon";
+
 import "../src/index.css";
+
+// Registers the mock service worker (msw) addon
+initialize();
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +16,7 @@ const preview: Preview = {
       },
     },
   },
+  loaders: [mswLoader],
 };
 
 export default preview;
