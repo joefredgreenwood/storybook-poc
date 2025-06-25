@@ -3323,6 +3323,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chromatic@npm:^13.0.1":
+  version: 13.0.1
+  resolution: "chromatic@npm:13.0.1"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 10c0/0f0a59964a5ec8b1550247e196ab3f85e84470e2275e44c2d4200e2c0a6f1734e4538d563fff788b126f44e868c16a6af6ebe1f5aefe781ff77b777b6bcb8b47
+  languageName: node
+  linkType: hard
+
 "ci-info@npm:^3.2.0":
   version: 3.9.0
   resolution: "ci-info@npm:3.9.0"
@@ -5223,6 +5242,7 @@ __metadata:
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    chromatic: "npm:^13.0.1"
     eslint: "npm:^9.9.0"
     eslint-plugin-react: "npm:^7.34.1"
     eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
