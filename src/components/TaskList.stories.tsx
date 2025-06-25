@@ -32,7 +32,7 @@ const Mockstore = ({
   taskboxState: typeof MockedState;
   children: React.ReactNode;
 }) => (
-  // As the redux docs reccomend, create a real store but with fake data when testing
+  // As the redux docs recommend, create a real store but with fake data when testing
   <Provider
     store={configureStore({
       reducer: {
