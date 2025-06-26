@@ -29,6 +29,7 @@ export default function InboxScreen() {
   return (
     <div className="page lists-show">
       <nav>
+        <h2 className="title-page">What does adding another title do</h2>
         <h1 className="title-page">Taskbox 123</h1>
       </nav>
       <TaskList />
