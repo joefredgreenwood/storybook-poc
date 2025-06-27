@@ -15,7 +15,7 @@ export default function Task({
   onPinTask,
 }: TaskProps) {
   return (
-    <div className={`list-item ${state}`}>
+    <div className={`list-item ${state}`} data-testid={"task"}>
       <label
         htmlFor={`archiveTask-${id}`}
         aria-label={`archiveTask-${id}`}

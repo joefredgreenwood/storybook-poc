@@ -9,6 +9,7 @@ import * as TaskStories from "./Task.stories";
 import { Provider } from "react-redux";
 
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { expect, within } from "@storybook/test";
 
 // A super-simple mock of the state of the store
 export const MockedState = {
@@ -94,6 +95,20 @@ export const WithPinnedTasks: Story = {
       );
     },
   ],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Select all task items by a shared role or class
+    const taskItems = canvas.getAllByTestId("task");
+
+    // Extract titles from rendered <input value="..."> inside each task
+    const titles = taskItems.map((item) =>
+      item.querySelector('input[name="title"]')?.getAttribute("value")
+    );
+
+    // Assert that the first task is the starred one
+    expect(titles[0]).toContain("Task 6");
+  },
 };
 
 export const Loading: Story = {
